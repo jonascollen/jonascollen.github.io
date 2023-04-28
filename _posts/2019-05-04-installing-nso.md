@@ -1,7 +1,6 @@
 ---
 title: Installing NSO
 date: 2019-05-04 13:19 +0800
-author: Jonas Collén
 comments: false
 categories: [NSO]
 tags: [Automation, NSO]
