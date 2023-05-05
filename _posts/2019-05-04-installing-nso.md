@@ -1,7 +1,7 @@
 ---
 title: Installing NSO
 date: 2019-05-04 13:19 +0800
-comments: false
+comments: true
 categories: [NSO]
 tags: [Automation, NSO]
 toc: false
