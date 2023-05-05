@@ -13,12 +13,12 @@ So what have I been up to the last few months?
 I became a dad!
 ---------------
 
-![](/assets/images/2019/10/20191005_120644-e1570456528986-768x1024.jpg)
+![](/assets/images/2019/10/20191005_120644-e1570456528986.jpg)
 
 We bought a house!
 ------------------
 
-![](/assets/images/2019/10/20190728_150002-1024x809.jpg)
+![](/assets/images/2019/10/20190728_150002.jpg)
 
 And everything else feels pretty minor in comparison.. I've still been doing some coding though as I've attempted to build a smart home (project ongoing..) via Home Assistant and IoT.
 
