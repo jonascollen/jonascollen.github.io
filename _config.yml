@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
  A technical blog about all things automation, ccnp/ccie and devnet
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: "https://jonascollen.github.io"
+url: "https://www.jonascollen.se"
 
 github:
   username: jonascollen # change to your github username
@@ -93,7 +93,7 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: jonascollen/jonascollen.github.ui
+    repo: jonascollen/jonascollen.github.io
     repo_id: R_kgDOJcfQjg
     category: General
     category_id: DIC_kwDOJcfQjs4CWSwV
