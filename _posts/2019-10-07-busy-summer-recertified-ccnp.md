@@ -3,8 +3,8 @@ title: Busy summer & recertified CCNP
 date: 2019-10-07 16:05
 author: Jonas Collén
 comments: true
-categories: [CCNP, Other]
-tags: [Certification, Life]
+categories: [Other]
+tags: [certification, life]
 ---
 Been a few months since my last post as I've had a crazy busy summer/autumn and it will probably take a while longer until I get going again. Cisco has introduced their new revamped certifications track which looks hard but very interesting, I'll probably give the DevOps-track a go next year. But for now I've recently renewed my CCNP R&S for another 3 years at least.
 

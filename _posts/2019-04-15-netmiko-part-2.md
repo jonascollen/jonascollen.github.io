@@ -3,8 +3,8 @@ title: Netmiko part 2
 date: 2019-04-15 21:46
 author: Jonas Collén
 comments: true
-categories: [Netmiko, Python, Scripting]
-tags: [netmiko, python]
+categories: [Netmiko, Automation, Python]
+tags: [templates]
 ---
 A follow-up on the latest post about [Netmiko](https://github.com/ktbyers/netmiko) where we logged in to our devices and did some show commands, let's continue and do a very common thing in production networks with many devices - pushing out new config from a template.
 

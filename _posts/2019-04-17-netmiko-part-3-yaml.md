@@ -3,7 +3,7 @@ title: Netmiko part 3 - YAML
 date: 2019-04-17 21:01
 author: Jonas Collén
 comments: true
-categories: [Python, Scripting, Netmiko, Yaml]
+categories: [Python, Automation, Netmiko]
 tags: [netmiko, yaml]
 ---
 The last few examples of using netmiko hasn't really been very scalable as the devices was provided as a list directly in the code. In this example I thought we could try out and use [YAML](https://yaml.org/) for an inventory-file instead.

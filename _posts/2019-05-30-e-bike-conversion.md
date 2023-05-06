@@ -4,9 +4,9 @@ date: 2019-05-30 22:34
 author: Jonas Collén
 comments: true
 categories: [Projects, Other]
-tags: bbshd, em3ev, Electric bike
+tags: [bbshd, em3ev, electric bike]
 ---
-Something as unusual as a non-networking post, but it was a fun project so thought I could do a short post about it. We're soon moving a bit further out of town to a house so i've been eyeing an eletric bike for a while, but in the end decided to build my own as the bikes for sale here in Sweden is pretty bland - and tinkering with stuff is fun... :)
+Something as unusual as a non-networking post, but it was a fun project so thought I could do a short post about it. We're soon moving a bit further out of town to a house so i've been eyeing an electric bike for a while, but in the end decided to build my own as the bikes for sale here in Sweden is pretty bland - and tinkering with stuff is fun... :)
 
 ![](/assets/images/2019/05/Pro-Air-Herr-3396.png)
 
@@ -14,7 +14,7 @@ The bike I used is a 2016 Nishiki Pro Air which has a BSA 68mm bottom-bracket th
 
 ![](/assets/images/2019/05/IMG_3825.jpg)
 
-I ordered a Bafang BBSHD 1000W (~1500W Max), Jumbo Shark Battery 52v 14.8Ah HG2 (~44A Continous/55A Max discharge) and a 46t Lekkie Blingring. This is **ooof cooourse** limited to 250W & 25km/h however to keep it road legal here in Sweden. :) But i've heard rumors that you can put a throttle on it and it will do ~60km/h even uphill with current gearing and some light pedaling, so it pretty much turns in to a rocket.
+I ordered a Bafang BBSHD 1000W (~1500W Max), Jumbo Shark Battery 52v 14.8Ah HG2 (~44A Continuous/55A Max discharge) and a 46t Lekkie Blingring. This is **ooof cooourse** limited to 250W & 25km/h however to keep it road legal here in Sweden. :) But i've heard rumors that you can put a throttle on it and it will do ~60km/h even uphill with current gearing and some light pedaling, so it pretty much turns in to a rocket.
 
 ![](/assets/images/2019/05/58463123_2017575868552001_7226363293919608832_n.jpg)
 
