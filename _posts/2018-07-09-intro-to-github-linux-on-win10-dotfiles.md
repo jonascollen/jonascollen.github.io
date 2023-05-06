@@ -12,7 +12,7 @@ I've been buried with work trying to deploy the web portal I mentioned earlier b
 
 Really recommend watching Corey Schafers tutorials/intro to Github [here](https://www.youtube.com/watch?v=HVsySz-h9r4&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx) if you're interested, he does an amazing job explaining most of the features you'll ever need. 
 
-![](/assets/images/2018/07/store-232x300.png)
+![](/assets/images/2018/07/store.png)
 
 Spending so much time in a linux prompt and writing some shell scripts now and then it's been a bit annoying not being able to test them without having to SSH in to a linux-distro every time. Today I stumbled upon another pretty cool [video](https://www.youtube.com/watch?v=xzgwDbe7foQ) from Corey showing how you now can run a Linux subsystem within Windows 10! 
 
