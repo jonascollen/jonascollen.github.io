@@ -9,7 +9,7 @@ Tänkte skriva ett kortare inlägg om ett rätt intressant problem jag stötte p
 ![lightvrf](/assets/images/2014/03/lightvrf.png) 
 Länken mot ISP-1 önskades vara primär pga bättre serviceavtal & bandbredd samtidigt som länken till ISP-2 endast skulle användas som backup. Både ISP-1 & 2 genererar en default-route samt annonserar varsitt 10.x.0.0/23-nät. Det fanns även önskemål att AS #666 skulle agera transit mellan ISP-1 & 2. 
 
-![lightvrfigp](/assets/images/2014/03/lightvrfigp.png?w=630) 
+![lightvrfigp](/assets/images/2014/03/lightvrfigp.png) 
 Som IGP användes EIGRP inom AS #666 samt mellan R1 - ISP-1 och OSPF mellan R3 - ISP-2 där respektive länknät redistributas. Detta är egentligen helt onödigt men användes för att göra uppgiften lite mer komplicerad bara. :) 
 
 Problematiken var dock att ISP-1 & ISP-2 består av en och samma router! Den fysiska topologin ser nämligen ut enligt följande: 

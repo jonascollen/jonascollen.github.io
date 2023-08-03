@@ -7,7 +7,7 @@ tags: [type 7-5 translation]
 ---
 Forsätter nöta OSPF-labbar från [GNS3 Vault](http://gns3vault.com/OSPF/ospf-nssa-lsa-type-7-to-5-translator-election.html). :) 
 
-![ospfnssa7to5telect](/assets/images/2014/03/ospfnssa7to5telect.png?w=630)
+![ospfnssa7to5telect](/assets/images/2014/03/ospfnssa7to5telect.png)
 
 GOAL:
 -----

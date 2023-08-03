@@ -99,7 +99,7 @@ router ospf 310
 ```
 
 **Verifikation**
-![Customer-MPLSKiruna](/assets/images/2014/01/customer-mplskiruna.png?w=630)
+![Customer-MPLSKiruna](/assets/images/2014/01/customer-mplskiruna.png)
 
 Ett till kontor sattes upp i Kiruna med identisk konfig för att kunna köra lite tester. Ping från Kista- till Kiruna-kontoret:
 

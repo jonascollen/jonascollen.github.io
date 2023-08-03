@@ -5,7 +5,7 @@ comments: true
 categories: [OSPF]
 tags: [forwarding address suppression, type-7]
 ---
-En till OSPF-labb från [GNS3 Vault](http://gns3vault.com/OSPF/ospf-suppress-forward-address.html). ![ospfsuppressforwardaddress](/assets/images/2014/03/ospfsuppressforwardaddress.png?w=630)
+En till OSPF-labb från [GNS3 Vault](http://gns3vault.com/OSPF/ospf-suppress-forward-address.html). ![ospfsuppressforwardaddress](/assets/images/2014/03/ospfsuppressforwardaddress.png)
 
 Goal:
 -----
