@@ -7,7 +7,7 @@ comments: true
 categories: [AI, Python]
 tags: [chatterbot, flask]
 ---
-![](/assets/images/2018/04/banner-300x77.png) 
+![](/assets/images/2018/04/banner.png) 
 
 Tänkte skriva ett litet inlägg om hur jag implementerade [Chatterbot](http://chatterbot.readthedocs.io/en/stable/) på min Flask/Python-webbsida, krävdes en hel del trial & error innan jag väl fick det att fungera så kanske kan vara intressant för någon mer. Ordförrådet fick dock hållas väldigt begränsat då Raspberryn inte riktigt orkar med om det blev för stora databaser att jobba med (svarstider på +20 sek).
 

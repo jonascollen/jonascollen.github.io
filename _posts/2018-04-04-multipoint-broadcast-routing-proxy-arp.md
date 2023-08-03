@@ -6,7 +6,7 @@ comments: true
 categories: [Route Manipulation]
 tags: [proxy arp, static arp]
 ---
-![](/assets/images/2018/04/topologi.png) 
+![](/assets/images/2018/04/topologi_1.png) 
 
 Back to basics, en liten labb på hur proxy-arp fungerar när vi routar ut på ett multipoint (broadcast) interface med/utan proxy-arp (default alltid på i ios).
 
