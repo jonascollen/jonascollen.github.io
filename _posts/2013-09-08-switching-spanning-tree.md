@@ -41,7 +41,17 @@ VLAN0001
  Hello Time 2 sec Max Age 20 sec Forward Delay 15 sec
  Aging Time 300
 ```
-När en switch sedan tar emot ett BPDU-paket jämför den Root-ID:t med vad den själv har konfigurerat, är värdet bättre (lägre) byter den Root-bridge. De här bilderna visar förloppet väldigt bra: ![switches-in-triangle](/assets/images/2013/09/switches-in-triangle.png?w=568) Varje switch sätter sig själv som Root-Bridge och bygger ett BPDU-paket med Priority 32768 & dess MAC-adress. ![switches-send-bpdu](/assets/images/2013/09/switches-send-bpdu.png?w=568) BPDU-paket skickas ut på alla aktiva interface. ![stp-root-elected](/assets/images/2013/09/stp-root-elected.png) Switch B & C inser att Switch A har ett lägre Root-ID och sätter den som Root-Bridge.  Switcharna kommer sedan försöka räkna ut den bästa vägen till Root-Bridge och stänger av redundanta vägar till samma destination. När Switch A skickar ut sina BPDU-paket kommer den sätta något som kallas "root path cost", STPs metric, till **0**. När Switch B & C **tar emot paketet** adderar de först STP-costen till RPC enligt följande tabell:
+När en switch sedan tar emot ett BPDU-paket jämför den Root-ID:t med vad den själv har konfigurerat, är värdet bättre (lägre) byter den Root-bridge. De här bilderna visar förloppet väldigt bra: 
+![switches-in-triangle](/assets/images/2013/09/switches-in-triangle.pn) 
+
+Varje switch sätter sig själv som Root-Bridge och bygger ett BPDU-paket med Priority 32768 & dess MAC-adress. 
+
+![switches-send-bpdu](/assets/images/2013/09/switches-send-bpdu.png) 
+
+BPDU-paket skickas ut på alla aktiva interface. 
+![stp-root-elected](/assets/images/2013/09/stp-root-elected.png) 
+
+Switch B & C inser att Switch A har ett lägre Root-ID och sätter den som Root-Bridge.  Switcharna kommer sedan försöka räkna ut den bästa vägen till Root-Bridge och stänger av redundanta vägar till samma destination. När Switch A skickar ut sina BPDU-paket kommer den sätta något som kallas "root path cost", STPs metric, till **0**. När Switch B & C **tar emot paketet** adderar de först STP-costen till RPC enligt följande tabell:
 
 *   4M - 250
 *   10M - 100

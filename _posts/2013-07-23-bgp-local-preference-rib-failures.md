@@ -4,7 +4,7 @@ date: 2013-07-23 22:50
 comments: true
 categories: [BGP, Route Manipulation]
 ---
-Vi fortsätter på temat BGP Path Selection från föregående [posten](http://Jonas Collén.wordpress.com/2013/07/23/bgp-path-selection-part-ii-weight/) där vi kollade närmare på route manipulering via route-maps & weight-attributet. 
+Vi fortsätter på temat BGP Path Selection från föregående [posten](http://www.jonascollen.se/posts/bgp-path-selection-part-ii-weight/) där vi kollade närmare på route manipulering via route-maps & weight-attributet. 
 ![](/assets/images/2013/07/topologylocalpref.jpg)
 
 Local Preference

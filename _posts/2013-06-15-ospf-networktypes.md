@@ -4,7 +4,7 @@ date: 2013-06-15 21:11
 comments: true
 categories: [OSPF]
 ---
-Fortsättning på tidigare inlägg om [DR & BDR](http://Jonas Collén.wordpress.com/2013/06/12/ospf-the-basics-ii/). OSPF har ett flertal olika "**Network Types**" specificerade, och det är utefter detta som ospf-processen bestämmer om den behöver välja en **DR/BDR** under **2-way state** i skapandet av en **Neighbor Adjacency**. Dessa är:
+Fortsättning på tidigare inlägg om [DR & BDR](http://www.jonascollen.se/posts/ospf-the-basics-ii/). OSPF har ett flertal olika "**Network Types**" specificerade, och det är utefter detta som ospf-processen bestämmer om den behöver välja en **DR/BDR** under **2-way state** i skapandet av en **Neighbor Adjacency**. Dessa är:
 
 *   Non-Broadcast (NMBA)
 *   Point-To-Multipoint

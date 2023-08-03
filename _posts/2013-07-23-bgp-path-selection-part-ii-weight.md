@@ -4,7 +4,7 @@ date: 2013-07-23 19:50
 comments: true
 categories: [BGP, CCNP, Path Selection, Route Manipulation, route-map, weight]
 ---
-Detta blir en fortsättning på inlägget "[AS_SEQ Path Attribute & Path Selection](http://Jonas Collén.wordpress.com/2013/07/22/bgp-as_seq-path-attribute-best-path-selection/)" så vi kan gå in lite mer på djupet över hur just BGPs best path selection går till. För att bestämma vilken route som är bäst används följande kriterier i turordning tills den hittat en avgörande faktor, dvs om alla parametrar är identiska mellan två vägar för en specifik destination så är det tillslut den med lägst Router-ID som vinner. :)
+Detta blir en fortsättning på inlägget "[AS_SEQ Path Attribute & Path Selection](http://www.jonascollen.se/posts/bgp-as_seq-path-attribute-best-path-selection/)" så vi kan gå in lite mer på djupet över hur just BGPs best path selection går till. För att bestämma vilken route som är bäst används följande kriterier i turordning tills den hittat en avgörande faktor, dvs om alla parametrar är identiska mellan två vägar för en specifik destination så är det tillslut den med lägst Router-ID som vinner. :)
 
 1.  Largest Weight (cisco proprietary)
 2.  Highest Local Preference

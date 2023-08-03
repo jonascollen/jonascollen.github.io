@@ -211,7 +211,7 @@ R5#sh tcp brief
 TCB Local Address Foreign Address (state)
 66B535F4 172.16.51.5.179 172.16.51.1.27320 ESTAB
 ```
-I den tidigare posten [BGP - Internal BGP & Transit-Areas](http://Jonas Collén.wordpress.com/2013/07/07/bgp-internal-bgp-transitarea/)  kan du se flera exempel på hur vi konfigurerar neighbor-relationships.
+I den tidigare posten [BGP - Internal BGP & Transit-Areas](http://www.jonascollen.se/posts/bgp-internal-bgp-transitarea/)  kan du se flera exempel på hur vi konfigurerar neighbor-relationships.
 
 Cisco's Enterprise Definitioner
 -------------------------------

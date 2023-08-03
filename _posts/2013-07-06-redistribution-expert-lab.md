@@ -4,7 +4,7 @@ date: 2013-07-06 15:56
 comments: true
 categories: [EIGRP,Route Manipulation]
 ---
-Tänkte ta mig an labben jag nämnde i [föregående inlägg](http://Jonas Collén.wordpress.com/2013/07/04/redistribution-labs/) från Petr Lapukhov. 
+Tänkte ta mig an labben jag nämnde i [föregående inlägg](http://www.jonascollen.se/posts/redistribution-labs/) från Petr Lapukhov. 
 
 Topologin är följande: 
 [![expert redistribution](/assets/images/2013/07/expert-redistribution.png)](/assets/images/2013/07/expert-redistribution.png) 

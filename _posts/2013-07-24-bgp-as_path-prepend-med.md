@@ -8,7 +8,7 @@ tags: [as-path prepend, med]
 AS_Path Prepend
 ----------------
 
-Steg 4 i BGPs "best path selection"-process är som vi redan vet AS_PATH och vi har tagit upp hur denna process går till i flera tidigare inlägg, bland annat [AS_SEQ Path Attribute](http://Jonas Collén.wordpress.com/2013/07/22/bgp-as_seq-path-attribute-best-path-selection/) & [Path Selection Part II](http://Jonas Collén.wordpress.com/2013/07/23/bgp-path-selection-part-ii-weight/). Genom att använda oss av AS_PATH Prepend får vi möjlighet att manuellt lägga till ytterligare AS i AS_PATH för en route och på så vis få den mindre attraktiv. Detta påverkar dock ej AS_Path Loop Prevention så vi har möjlighet att lägga till samma AS-nummer ett flertal gånger istället. 
+Steg 4 i BGPs "best path selection"-process är som vi redan vet AS_PATH och vi har tagit upp hur denna process går till i flera tidigare inlägg, bland annat [AS_SEQ Path Attribute](http://www.jonascollen.se/posts/bgp-as_seq-path-attribute-best-path-selection/) & [Path Selection Part II](http://www.jonascollen.se/posts/bgp-path-selection-part-ii-weight/). Genom att använda oss av AS_PATH Prepend får vi möjlighet att manuellt lägga till ytterligare AS i AS_PATH för en route och på så vis få den mindre attraktiv. Detta påverkar dock ej AS_Path Loop Prevention så vi har möjlighet att lägga till samma AS-nummer ett flertal gånger istället. 
 ![](/assets/images/2013/07/topologylocalpref.jpg) 
 
 Om vi kollar från R7s perspektiv i ovanstående topologi, så har vi  exempelvis möjlighet att få routes vi lär oss från AS500 att se sämre ut genom att lägga till ytterligare AS_Path hopp. En sh ip bgp visar följande just nu: 

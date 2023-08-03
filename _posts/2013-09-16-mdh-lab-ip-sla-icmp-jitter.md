@@ -8,7 +8,7 @@ tags: [jitter]
 Topologi
 --------
 
-[![lab-ipsla](/assets/images/2013/09/lab-ipsla.png?w=553)](/assets/images/2013/09/lab-ipsla.png)
+[![lab-ipsla](/assets/images/2013/09/lab-ipsla.png)](/assets/images/2013/09/lab-ipsla.png)
 
 Objectives
 ----------

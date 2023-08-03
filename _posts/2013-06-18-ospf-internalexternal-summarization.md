@@ -5,7 +5,7 @@ comments: true
 categories: [OSPF]
 tags: [route summarization]
 ---
-Detta blir ett kortare inlägg om route-summering i OSPF, vilket skiljer sig en hel del från EIGRP's implementering. Vid det här laget ska du väl förhoppningsvis ha järnkoll på de olika LSA-typerna som finns, om inte så är det nog bättre du backar tillbaka och läser tidigare poster om detta [här](http://Jonas Collén.wordpress.com/2013/06/16/ospf-lsa-types/) och [här](http://Jonas Collén.wordpress.com/2013/06/17/ospf-area-types-lsa-type-7/). Det finns vissa regler/saker som är bra att känna till när det kommer till summering innan vi kör igång:
+Detta blir ett kortare inlägg om route-summering i OSPF, vilket skiljer sig en hel del från EIGRP's implementering. Vid det här laget ska du väl förhoppningsvis ha järnkoll på de olika LSA-typerna som finns, om inte så är det nog bättre du backar tillbaka och läser tidigare poster om detta [här](http://www.jonascollen.se/posts/ospf-lsa-types/) och [här](http://www.jonascollen.se/posts/ospf-area-types-lsa-type-7/). Det finns vissa regler/saker som är bra att känna till när det kommer till summering innan vi kör igång:
 
 *   En summary-route kommer endast annonseras såvida det finns minst ett aktivt subnät inom specificerat range
 *   En summary-route kommer ha costen för det nät med LÄGST cost som faller inom specificerat range.

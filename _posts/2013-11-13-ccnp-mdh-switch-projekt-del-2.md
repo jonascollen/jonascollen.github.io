@@ -8,7 +8,7 @@ tags: [hsrp]
 Har varit lite dåligt med inlägg på senare tid, har pluggat multicast senaste ~2 veckorna men inte riktigt funnit motivationen att skriva inlägg om de mer teoretiska bitarna då det redan finns så oändligt med info om det redan. Tänkte istället visa några av lösningarna vi använt oss av i vårat senast switch-projekt.
 
 Topologin ser ut enligt följande:
-[![switchprojekt](/assets/images/2013/10/switchprojekt.png?w=630)](/assets/images/2013/10/switchprojekt.png) 
+[![switchprojekt](/assets/images/2013/10/switchprojekt.png)](/assets/images/2013/10/switchprojekt.png) 
 
 Vi kör EIGRP på alla L3-enheter, dvs R1-3, S1 & S3.
 

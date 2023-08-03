@@ -8,7 +8,7 @@ tags: [inter-vlan routing]
 Topologi
 --------
 
-![lab4-2real](/assets/images/2013/09/lab4-2real.png?w=630)
+![lab4-2real](/assets/images/2013/09/lab4-2real.png)
 
 Objective
 ---------

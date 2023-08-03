@@ -8,7 +8,7 @@ tags: [stp]
 Topologi
 --------
 
-![lab3-2](/assets/images/2013/09/lab3-21.png?w=630)
+![lab3-2](/assets/images/2013/09/lab3-21.png)
 
 Objective
 ---------

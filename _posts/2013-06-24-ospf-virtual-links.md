@@ -77,7 +77,7 @@ Link ID ADV Router Age Seq# Checksum Link count
 ```
 [![virtual link lsa](/assets/images/2013/06/virtual-link-lsa.png)](/assets/images/2013/06/virtual-link-lsa.png)
 
-Om du glömt bort hur LSA Type 1 byggs upp med de olika **Link Type's** som finns etc, repetera [denna post](http://Jonas Collén.wordpress.com/2013/06/16/ospf-lsa-types/) om LSA-types. Vilken effekt har detta då på R1 & R3's routing tabell? Låt oss kolla.. 
+Om du glömt bort hur LSA Type 1 byggs upp med de olika **Link Type's** som finns etc, repetera [denna post](http://www.jonascollen.se/posts/ospf-lsa-types/) om LSA-types. Vilken effekt har detta då på R1 & R3's routing tabell? Låt oss kolla.. 
 
 R1
 ```

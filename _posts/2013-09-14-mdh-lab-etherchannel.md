@@ -8,7 +8,7 @@ tags: [lacp,etherchannel]
 Topologi
 --------
 
-![lab2-2](/assets/images/2013/09/lab2-21.png?w=630)
+![lab2-2](/assets/images/2013/09/lab2-21.png)
 
 Objective
 ---------

@@ -8,7 +8,7 @@ tags: [vtp]
 Topologi
 --------
 
-![lab2-1](/assets/images/2013/09/lab2-11.png?w=630)
+![lab2-1](/assets/images/2013/09/lab2-11.png)
 
 Objectives
 ----------

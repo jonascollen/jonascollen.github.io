@@ -111,7 +111,7 @@ Routing entry for 192.168.0.0/24
  AS Hops 1
  Route tag 50
 ```
-En viktig skillnad mellan iBGP och eBGP är förövrigt att iBGP ej lägger till sitt AS i AS_PATH. Varför? BGP's "loop prevention" innebär att routern alltid inspekterar AS_PATH för nya routes, och om den finner att sitt eget AS-nummer redan finns med så ignoreras routen (en bättre väg måste bevisligen redan finnas). Hur vi löser loop prevention i iBGP har jag redan nämnt i det tidigare inlägget  "[BGP - Internal BGP & Transitarea](http://Jonas Collén.wordpress.com/2013/07/07/bgp-internal-bgp-transitarea/)" (full mesh).
+En viktig skillnad mellan iBGP och eBGP är förövrigt att iBGP ej lägger till sitt AS i AS_PATH. Varför? BGP's "loop prevention" innebär att routern alltid inspekterar AS_PATH för nya routes, och om den finner att sitt eget AS-nummer redan finns med så ignoreras routen (en bättre väg måste bevisligen redan finnas). Hur vi löser loop prevention i iBGP har jag redan nämnt i det tidigare inlägget  "[BGP - Internal BGP & Transitarea](http://www.jonascollen.se/posts/bgp-internal-bgp-transitarea/)" (full mesh).
 
 Best Path Selection
 -------------------
