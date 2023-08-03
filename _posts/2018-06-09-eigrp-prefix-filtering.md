@@ -20,45 +20,45 @@ Before we start our filtering our routing table should look something like this:
 	Gateway of last resort is not set
 
 	150.1.0.0/32 is subnetted, 10 subnets
-	D 150.1.1.1 \[90/130816\] via 155.1.146.1, 00:49:27, GigabitEthernet1.146
-	D 150.1.2.2 \[90/131328\] via 155.1.146.1, 00:01:19, GigabitEthernet1.146
-	D 150.1.3.3 \[90/131072\] via 155.1.146.1, 00:28:38, GigabitEthernet1.146
-	D 150.1.5.5 \[90/130816\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
-	D 150.1.6.6 \[90/130816\] via 155.1.146.6, 00:49:27, GigabitEthernet1.146
-	D 150.1.7.7 \[90/131072\] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
-	D 150.1.8.8 \[90/131072\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
-	D 150.1.9.9 \[90/131328\] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
-	D 150.1.10.10 \[90/131328\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	D 150.1.1.1 [90/130816] via 155.1.146.1, 00:49:27, GigabitEthernet1.146
+	D 150.1.2.2 [90/131328] via 155.1.146.1, 00:01:19, GigabitEthernet1.146
+	D 150.1.3.3 [90/131072] via 155.1.146.1, 00:28:38, GigabitEthernet1.146
+	D 150.1.5.5 [90/130816] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	D 150.1.6.6 [90/130816] via 155.1.146.6, 00:49:27, GigabitEthernet1.146
+	D 150.1.7.7 [90/131072] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
+	D 150.1.8.8 [90/131072] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	D 150.1.9.9 [90/131328] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
+	D 150.1.10.10 [90/131328] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
 	155.1.0.0/16 is variably subnetted, 18 subnets, 2 masks
-	D 155.1.5.0/24 \[90/3072\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	D 155.1.5.0/24 [90/3072] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
 	D 155.1.7.0/24 
-	\[90/3328\] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
-	D 155.1.8.0/24 \[90/3328\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	[90/3328] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
+	D 155.1.8.0/24 [90/3328] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
 	D 155.1.9.0/24 
-	\[90/3584\] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
-	D 155.1.10.0/24 \[90/3584\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	[90/3584] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
+	D 155.1.10.0/24 [90/3584] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
 	D 155.1.13.0/24 
-	\[90/3072\] via 155.1.146.1, 00:49:27, GigabitEthernet1.146
+	[90/3072] via 155.1.146.1, 00:49:27, GigabitEthernet1.146
 	D 155.1.23.0/24 
-	\[90/3328\] via 155.1.146.1, 00:28:38, GigabitEthernet1.146
+	[90/3328] via 155.1.146.1, 00:28:38, GigabitEthernet1.146
 	D 155.1.37.0/24 
-	\[90/3328\] via 155.1.146.6, 00:28:38, GigabitEthernet1.146
-	\[90/3328\] via 155.1.146.1, 00:28:38, GigabitEthernet1.146
-	D 155.1.58.0/24 \[90/3072\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	[90/3328] via 155.1.146.6, 00:28:38, GigabitEthernet1.146
+	[90/3328] via 155.1.146.1, 00:28:38, GigabitEthernet1.146
+	D 155.1.58.0/24 [90/3072] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
 	D 155.1.67.0/24 
-	\[90/3072\] via 155.1.146.6, 00:49:27, GigabitEthernet1.146
+	[90/3072] via 155.1.146.6, 00:49:27, GigabitEthernet1.146
 	D 155.1.79.0/24 
-	\[90/3328\] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
+	[90/3328] via 155.1.146.6, 00:49:11, GigabitEthernet1.146
 	D 155.1.108.0/24 
-	\[90/3328\] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
+	[90/3328] via 155.1.45.5, 00:49:30, GigabitEthernet1.45
 
 Let's start by creating a prefix-list that blocks our loopback and permits everything else.
 
-	ip prefix-list BLOCK\_R4\_LOOP deny 150.1.4.4/32
-	ip prefix-list BLOCK\_R4\_LOOP permit 0.0.0.0/0 le 32
+	ip prefix-list BLOCK_R4_LOOP deny 150.1.4.4/32
+	ip prefix-list BLOCK_R4_LOOP permit 0.0.0.0/0 le 32
 
 	router eigrp 100
-	 distribute-list prefix BLOCK\_R4\_LOOP out Gi1.45
+	 distribute-list prefix BLOCK_R4_LOOP out Gi1.45
 
 R5 should no longer see the 150.1.4.4/32 over the Gi1.45 link:
 
@@ -68,7 +68,7 @@ R5 should no longer see the 150.1.4.4/32 over the Gi1.45 link:
 	Redistributing via eigrp 100
 	**Last update from 155.1.0.4 on Tunnel0, 00:00:06 ago**
 	Routing Descriptor Blocks:
-	\* 155.1.0.4, from 155.1.0.4, 00:00:06 ago, via Tunnel0
+	* 155.1.0.4, from 155.1.0.4, 00:00:06 ago, via Tunnel0
 	Route metric is 25984000, traffic share count is 1
 	Total delay is 15000 microseconds, minimum bandwidth is 100 Kbit
 	Reliability 255/255, minimum MTU 1400 bytes
@@ -92,12 +92,12 @@ As we can see, the only odd-numbered network found in our routing table now is R
 	Gateway of last resort is not set
 
 	150.1.0.0/32 is subnetted, 6 subnets
-	D 150.1.2.2 \[90/131328\] via 155.1.79.7, 00:12:23, GigabitEthernet1.79
-	D 150.1.4.4 \[90/131328\] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
-	D 150.1.6.6 \[90/131072\] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
-	D 150.1.8.8 \[90/131840\] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
+	D 150.1.2.2 [90/131328] via 155.1.79.7, 00:12:23, GigabitEthernet1.79
+	D 150.1.4.4 [90/131328] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
+	D 150.1.6.6 [90/131072] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
+	D 150.1.8.8 [90/131840] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
 	**C 150.1.9.9 is directly connected, Loopback0**
-	D 150.1.10.10 \[90/132096\] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
+	D 150.1.10.10 [90/132096] via 155.1.79.7, 01:00:16, GigabitEthernet1.79
 
 Lab 3 - Filtering with extended ACLs
 ------------------------------------
@@ -114,42 +114,42 @@ When we use extended ACLs with distribute-lists remember that the source-field r
 	Gateway of last resort is not set
 
 	150.1.0.0/32 is subnetted, 10 subnets
-	D 150.1.1.1 \[90/25984000\] via 155.1.0.1, 00:00:09, Tunnel0
-	D 150.1.2.2 \[90/25984000\] via 155.1.0.2, 00:00:09, Tunnel0
-	D 150.1.3.3 \[90/25984000\] via 155.1.0.3, 00:00:09, Tunnel0
-	D 150.1.4.4 \[90/25984000\] via 155.1.0.4, 00:00:09, Tunnel0
+	D 150.1.1.1 [90/25984000] via 155.1.0.1, 00:00:09, Tunnel0
+	D 150.1.2.2 [90/25984000] via 155.1.0.2, 00:00:09, Tunnel0
+	D 150.1.3.3 [90/25984000] via 155.1.0.3, 00:00:09, Tunnel0
+	D 150.1.4.4 [90/25984000] via 155.1.0.4, 00:00:09, Tunnel0
 	C 150.1.5.5 is directly connected, Loopback0
-	D 150.1.6.6 \[90/25984256\] via 155.1.0.4, 00:00:09, Tunnel0
-	\[90/25984256\] via 155.1.0.1, 00:00:09, Tunnel0
-	D 150.1.7.7 \[90/25984256\] via 155.1.0.3, 00:00:09, Tunnel0
-	D 150.1.8.8 \[90/130816\] via 155.1.58.8, 00:22:56, GigabitEthernet1.58
-	D 150.1.9.9 \[90/25984512\] via 155.1.0.3, 00:00:09, Tunnel0
-	D 150.1.10.10 \[90/131072\] via 155.1.58.8, 00:22:56, GigabitEthernet1.58
+	D 150.1.6.6 [90/25984256] via 155.1.0.4, 00:00:09, Tunnel0
+	[90/25984256] via 155.1.0.1, 00:00:09, Tunnel0
+	D 150.1.7.7 [90/25984256] via 155.1.0.3, 00:00:09, Tunnel0
+	D 150.1.8.8 [90/130816] via 155.1.58.8, 00:22:56, GigabitEthernet1.58
+	D 150.1.9.9 [90/25984512] via 155.1.0.3, 00:00:09, Tunnel0
+	D 150.1.10.10 [90/131072] via 155.1.58.8, 00:22:56, GigabitEthernet1.58
 	155.1.0.0/16 is variably subnetted, 18 subnets, 2 masks
 	C 155.1.0.0/24 is directly connected, Tunnel0
 	L 155.1.0.5/32 is directly connected, Tunnel0
 	C 155.1.5.0/24 is directly connected, GigabitEthernet1.5
 	L 155.1.5.5/32 is directly connected, GigabitEthernet1.5
-	D 155.1.7.0/24 \[90/25856512\] via 155.1.0.3, 00:00:09, Tunnel0
-	D 155.1.8.0/24 \[90/3072\] via 155.1.58.8, 00:22:15, GigabitEthernet1.58
-	D 155.1.9.0/24 \[90/25856768\] via 155.1.0.3, 00:00:09, Tunnel0
-	D 155.1.10.0/24 \[90/3328\] via 155.1.58.8, 00:22:15, GigabitEthernet1.58
-	D 155.1.13.0/24 \[90/25856256\] via 155.1.0.3, 00:00:09, Tunnel0
-	\[90/25856256\] via 155.1.0.1, 00:00:09, Tunnel0
-	D 155.1.23.0/24 \[90/25856256\] via 155.1.0.3, 00:00:09, Tunnel0
-	\[90/25856256\] via 155.1.0.2, 00:00:09, Tunnel0
-	D 155.1.37.0/24 \[90/25856256\] via 155.1.0.3, 00:00:09, Tunnel0
-	D 155.1.45.0/24 \[90/25856256\] via 155.1.0.4, 00:00:09, Tunnel0
+	D 155.1.7.0/24 [90/25856512] via 155.1.0.3, 00:00:09, Tunnel0
+	D 155.1.8.0/24 [90/3072] via 155.1.58.8, 00:22:15, GigabitEthernet1.58
+	D 155.1.9.0/24 [90/25856768] via 155.1.0.3, 00:00:09, Tunnel0
+	D 155.1.10.0/24 [90/3328] via 155.1.58.8, 00:22:15, GigabitEthernet1.58
+	D 155.1.13.0/24 [90/25856256] via 155.1.0.3, 00:00:09, Tunnel0
+	[90/25856256] via 155.1.0.1, 00:00:09, Tunnel0
+	D 155.1.23.0/24 [90/25856256] via 155.1.0.3, 00:00:09, Tunnel0
+	[90/25856256] via 155.1.0.2, 00:00:09, Tunnel0
+	D 155.1.37.0/24 [90/25856256] via 155.1.0.3, 00:00:09, Tunnel0
+	D 155.1.45.0/24 [90/25856256] via 155.1.0.4, 00:00:09, Tunnel0
 	C 155.1.58.0/24 is directly connected, GigabitEthernet1.58
 	L 155.1.58.5/32 is directly connected, GigabitEthernet1.58
-	D 155.1.67.0/24 \[90/25856512\] via 155.1.0.4, 00:00:09, Tunnel0
-	\[90/25856512\] via 155.1.0.3, 00:00:09, Tunnel0
-	\[90/25856512\] via 155.1.0.1, 00:00:09, Tunnel0
-	D 155.1.79.0/24 \[90/25856512\] via 155.1.0.3, 00:00:09, Tunnel0
+	D 155.1.67.0/24 [90/25856512] via 155.1.0.4, 00:00:09, Tunnel0
+	[90/25856512] via 155.1.0.3, 00:00:09, Tunnel0
+	[90/25856512] via 155.1.0.1, 00:00:09, Tunnel0
+	D 155.1.79.0/24 [90/25856512] via 155.1.0.3, 00:00:09, Tunnel0
 	D 155.1.108.0/24 
-	\[90/3072\] via 155.1.58.8, 00:22:15, GigabitEthernet1.58
-	D 155.1.146.0/24 \[90/25856256\] via 155.1.0.4, 00:00:09, Tunnel0
-	\[90/25856256\] via 155.1.0.1, 00:00:09, Tunnel0
+	[90/3072] via 155.1.58.8, 00:22:15, GigabitEthernet1.58
+	D 155.1.146.0/24 [90/25856256] via 155.1.0.4, 00:00:09, Tunnel0
+	[90/25856256] via 155.1.0.1, 00:00:09, Tunnel0
 
 There might be a much easier way to do this, but the way I solved it was by blocking all possible "alternative" routes learned in the DMVPN so only the targeted router was accepted as a valid update-source. So if we start with R4 & R6 that we're supposed to be routed towards R2, lets first create access-list that deny R1, R3 & R5 as update-sources for 150.1.4.4/32. ! R5 access-list 100 deny ip host 155.1.0.1 host 150.1.4.4 access-list 100 deny ip host 155.1.0.3 host 150.1.4.4 access-list 100 deny ip host 155.1.0.4 host 150.1.4.4 access-list 100 permit ip any any router eigrp 100 distribute-list 100 in Tunnel0 The only way to reach 150.1.4.4 over the DMVPN should now be 155.1.0.2.
 
@@ -194,16 +194,16 @@ Loopback prefixes for R4 & R6 should now be routed to R2, R1 & R2 to R3, R7 & R9
 
 	R5#sh ip route | inc 150.1 
 	150.1.0.0/32 is subnetted, 10 subnets
-	**D 150.1.1.1 \[90/25984256\] via 155.1.0.3, 00:00:16, Tunnel0**
-	**D 150.1.2.2 \[90/25984256\] via 155.1.0.3, 00:00:16, Tunnel0**
-	D 150.1.3.3 \[90/25984000\] via 155.1.0.3, 00:02:42, Tunnel0
-	**D 150.1.4.4 \[90/25984768\] via 155.1.0.2, 00:02:40, Tunnel0**
+	**D 150.1.1.1 [90/25984256] via 155.1.0.3, 00:00:16, Tunnel0**
+	**D 150.1.2.2 [90/25984256] via 155.1.0.3, 00:00:16, Tunnel0**
+	D 150.1.3.3 [90/25984000] via 155.1.0.3, 00:02:42, Tunnel0
+	**D 150.1.4.4 [90/25984768] via 155.1.0.2, 00:02:40, Tunnel0**
 	C 150.1.5.5 is directly connected, Loopback0
-	**D 150.1.6.6 \[90/25984768\] via 155.1.0.2, 00:00:15, Tunnel0**
-	**D 150.1.7.7 \[90/25984512\] via 155.1.0.1, 00:00:16, Tunnel0**
-	D 150.1.8.8 \[90/130816\] via 155.1.58.8, 00:08:37, GigabitEthernet1.58
-	**D 150.1.9.9 \[90/25984768\] via 155.1.0.1, 00:00:16, Tunnel0**
-	D 150.1.10.10 \[90/131072\] via 155.1.58.8, 00:08:37, GigabitEthernet1.58
+	**D 150.1.6.6 [90/25984768] via 155.1.0.2, 00:00:15, Tunnel0**
+	**D 150.1.7.7 [90/25984512] via 155.1.0.1, 00:00:16, Tunnel0**
+	D 150.1.8.8 [90/130816] via 155.1.58.8, 00:08:37, GigabitEthernet1.58
+	**D 150.1.9.9 [90/25984768] via 155.1.0.1, 00:00:16, Tunnel0**
+	D 150.1.10.10 [90/131072] via 155.1.58.8, 00:08:37, GigabitEthernet1.58
 
 Lab 4 - Filtering with Offset Lists
 -----------------------------------
@@ -271,7 +271,7 @@ Our routing table in R7 looks like this after the changes:
 	Redistributing via eigrp 100
 	Last update from 155.1.67.6 on GigabitEthernet1.67, 00:01:19 ago
 	Routing Descriptor Blocks:
-	\* 155.1.67.6, from 155.1.67.6, 00:01:19 ago, via GigabitEthernet1.67
+	* 155.1.67.6, from 155.1.67.6, 00:01:19 ago, via GigabitEthernet1.67
 	Route metric is 131328, traffic share count is 1
 	Total delay is 5030 microseconds, minimum bandwidth is 1000000 Kbit
 	Reliability 255/255, minimum MTU 1500 bytes
@@ -297,7 +297,7 @@ Should be pretty easy, as you maybe know we can set AD on either route or by nei
 	Redistributing via eigrp 100
 	**Last update from 155.1.13.1 on GigabitEthernet1.13, 00:00:37 ago**
 	Routing Descriptor Blocks:
-	**\* 155.1.13.1, from 155.1.13.1, 00:00:37 ago, via GigabitEthernet1.13**
+	*** 155.1.13.1, from 155.1.13.1, 00:00:37 ago, via GigabitEthernet1.13**
 	Route metric is 131328, traffic share count is 1
 	Total delay is 5030 microseconds, minimum bandwidth is 1000000 Kbit
 	Reliability 255/255, minimum MTU 1500 bytes
@@ -344,7 +344,7 @@ If we check the routes learned on R2 now 160.1.4.4/32 should be tagged.
 	Redistributing via eigrp 100
 	Last update from 155.1.23.3 on GigabitEthernet1.23, 00:02:55 ago
 	Routing Descriptor Blocks:
-	\* 155.1.23.3, from 155.1.23.3, 00:02:55 ago, via GigabitEthernet1.23
+	* 155.1.23.3, from 155.1.23.3, 00:02:55 ago, via GigabitEthernet1.23
 	Route metric is 131328, traffic share count is 1
 	Total delay is 5030 microseconds, minimum bandwidth is 1000000 Kbit
 	Reliability 255/255, minimum MTU 1500 bytes
@@ -357,7 +357,7 @@ If we check the routes learned on R2 now 160.1.4.4/32 should be tagged.
 	Redistributing via eigrp 100
 	Last update from 155.1.23.3 on GigabitEthernet1.23, 00:02:59 ago
 	Routing Descriptor Blocks:
-	\* 155.1.23.3, from 155.1.23.3, 00:02:59 ago, via GigabitEthernet1.23
+	* 155.1.23.3, from 155.1.23.3, 00:02:59 ago, via GigabitEthernet1.23
 	Route metric is 131328, traffic share count is 1
 	Total delay is 5030 microseconds, minimum bandwidth is 1000000 Kbit
 	Reliability 255/255, minimum MTU 1500 bytes
@@ -365,18 +365,18 @@ If we check the routes learned on R2 now 160.1.4.4/32 should be tagged.
 
 Looks good! Now just have to do a route-map and filter our incoming routes on R2.
 
-	route-map BLOCK\_TAG4 deny 10
+	route-map BLOCK_TAG4 deny 10
 	match tag 4
-	route-map BLOCK\_TAG4 permit 20
+	route-map BLOCK_TAG4 permit 20
 
 	router eigrp 100
-	distribute-list route-map BLOCK\_TAG4 in
+	distribute-list route-map BLOCK_TAG4 in
 
 We should now only see the 170.1.4.4 in R2.
 
 	R2#sh ip route eigrp | inc EX
 	D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
-	D EX 170.1.4.4 \[170/131328\] via 155.1.23.3, 00:05:21, GigabitEthernet1.23
+	D EX 170.1.4.4 [170/131328] via 155.1.23.3, 00:05:21, GigabitEthernet1.23
 
 	R2#sh ip route 160.1.4.4 
 	% Network not in table
@@ -388,17 +388,17 @@ We should now only see the 170.1.4.4 in R2.
 And the final step, filter out routes based on metric. Before configuring anything our routing table looks like this on R2:
 
 	150.1.0.0/32 is subnetted, 10 subnets
-	D 150.1.1.1 \[90/130816\] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
-	D 150.1.2.2 \[90/130816\] via 155.1.23.2, 00:09:51, GigabitEthernet1.23
+	D 150.1.1.1 [90/130816] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
+	D 150.1.2.2 [90/130816] via 155.1.23.2, 00:09:51, GigabitEthernet1.23
 	C 150.1.3.3 is directly connected, Loopback0
-	D 150.1.4.4 \[90/131072\] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
-	D 150.1.5.5 \[90/131328\] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
-	D 150.1.6.6 \[90/131072\] via 155.1.37.7, 00:09:51, GigabitEthernet1.37
-	\[90/131072\] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
-	D 150.1.7.7 \[90/130816\] via 155.1.37.7, 00:09:51, GigabitEthernet1.37
-	D 150.1.8.8 \[90/131584\] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
-	D 150.1.9.9 \[90/131072\] via 155.1.37.7, 00:09:51, GigabitEthernet1.37
-	D 150.1.10.10 \[90/131840\] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
+	D 150.1.4.4 [90/131072] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
+	D 150.1.5.5 [90/131328] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
+	D 150.1.6.6 [90/131072] via 155.1.37.7, 00:09:51, GigabitEthernet1.37
+	[90/131072] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
+	D 150.1.7.7 [90/130816] via 155.1.37.7, 00:09:51, GigabitEthernet1.37
+	D 150.1.8.8 [90/131584] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
+	D 150.1.9.9 [90/131072] via 155.1.37.7, 00:09:51, GigabitEthernet1.37
+	D 150.1.10.10 [90/131840] via 155.1.13.1, 00:09:51, GigabitEthernet1.13
 
 Matching by metric was new to me but it was pretty easy to find the command as it had to be done with a route-map in my mind. We use the match statement with metric, which has the following options:
 
@@ -412,26 +412,26 @@ Matching by metric was new to me but it was pretty easy to find the command as i
 For us to match metrics between 120,000 - 140,000 we set the "average" and use deviation-option.
 
 	!! R3
-	route-map BLOCK\_METRIC deny 10
+	route-map BLOCK_METRIC deny 10
 	match metric 130000 +- 10000
-	route-map BLOCK\_METRIC permit 20
+	route-map BLOCK_METRIC permit 20
 
 	router eigrp 100
-	distribute-list route-map BLOCK\_METRIC in
+	distribute-list route-map BLOCK_METRIC in
 
 The 150.1.x.x we're earlier routed via Gi1.13 & Gi1.37 but should now be filtered out and now take a worse route with metrics above 140k.
 
 	R3#sh ip route | inc 150.1
 	150.1.0.0/32 is subnetted, 10 subnets
-	D 150.1.1.1 \[90/27264000\] via 155.1.0.5, 00:04:17, Tunnel0
-	D 150.1.2.2 \[90/27264000\] via 155.1.0.5, 00:04:17, Tunnel0
+	D 150.1.1.1 [90/27264000] via 155.1.0.5, 00:04:17, Tunnel0
+	D 150.1.2.2 [90/27264000] via 155.1.0.5, 00:04:17, Tunnel0
 	C 150.1.3.3 is directly connected, Loopback0
-	D 150.1.4.4 \[90/27264000\] via 155.1.0.5, 00:04:17, Tunnel0
-	D 150.1.5.5 \[90/27008000\] via 155.1.0.5, 00:16:14, Tunnel0
-	D 150.1.6.6 \[90/27264256\] via 155.1.0.5, 00:04:17, Tunnel0
-	D 150.1.7.7 \[90/27264512\] via 155.1.0.5, 00:04:17, Tunnel0
-	D 150.1.8.8 \[90/27008256\] via 155.1.0.5, 00:16:14, Tunnel0
-	D 150.1.9.9 \[90/27264768\] via 155.1.0.5, 00:04:17, Tunnel0
-	D 150.1.10.10 \[90/27008512\] via 155.1.0.5, 00:16:14, Tunnel0
+	D 150.1.4.4 [90/27264000] via 155.1.0.5, 00:04:17, Tunnel0
+	D 150.1.5.5 [90/27008000] via 155.1.0.5, 00:16:14, Tunnel0
+	D 150.1.6.6 [90/27264256] via 155.1.0.5, 00:04:17, Tunnel0
+	D 150.1.7.7 [90/27264512] via 155.1.0.5, 00:04:17, Tunnel0
+	D 150.1.8.8 [90/27008256] via 155.1.0.5, 00:16:14, Tunnel0
+	D 150.1.9.9 [90/27264768] via 155.1.0.5, 00:04:17, Tunnel0
+	D 150.1.10.10 [90/27008512] via 155.1.0.5, 00:16:14, Tunnel0
 
 Sweet! Reading is going pretty well currently, I sort of finished "Routing on IOS, IOS XE, IOS XR", jumping over the chapters I haven't read anything about yet (multicast/bgp/route manipulation etc to backtrack later). Just started "Internet Routing Architectures" that seems to be focused solely on BGP, fun times! :)

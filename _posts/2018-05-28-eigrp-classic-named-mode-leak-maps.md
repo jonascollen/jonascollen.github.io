@@ -71,30 +71,30 @@ We should now have the baseline working.
 	Gateway of last resort is not set
 
 	4.0.0.0/24 is subnetted, 2 subnets
-	**D EX 4.0.0.0 \[170/130816\] via 155.1.45.4, 00:18:52, GigabitEthernet1.45**
-	**D EX 4.0.1.0 \[170/130816\] via 155.1.45.4, 00:18:52, GigabitEthernet1.45**
+	**D EX 4.0.0.0 [170/130816] via 155.1.45.4, 00:18:52, GigabitEthernet1.45**
+	**D EX 4.0.1.0 [170/130816] via 155.1.45.4, 00:18:52, GigabitEthernet1.45**
 	150.1.0.0/32 is subnetted, 2 subnets
-	D EX 150.1.4.4 \[170/130816\] via 155.1.45.4, 00:18:52, GigabitEthernet1.45
+	D EX 150.1.4.4 [170/130816] via 155.1.45.4, 00:18:52, GigabitEthernet1.45
 
 	R1#sh ip route eigrp | beg Gate
 	Gateway of last resort is not set
 
 	6.0.0.0/24 is subnetted, 2 subnets
-	**D EX 6.0.0.0 \[170/10880\] via 155.1.146.6, 00:14:51, GigabitEthernet1.146**
-	**D EX 6.0.1.0 \[170/10880\] via 155.1.146.6, 00:14:51, GigabitEthernet1.146**
+	**D EX 6.0.0.0 [170/10880] via 155.1.146.6, 00:14:51, GigabitEthernet1.146**
+	**D EX 6.0.1.0 [170/10880] via 155.1.146.6, 00:14:51, GigabitEthernet1.146**
 	150.1.0.0/32 is subnetted, 2 subnets
-	D EX 150.1.6.6 \[170/10880\] via 155.1.146.6, 00:14:51, GigabitEthernet1.146
+	D EX 150.1.6.6 [170/10880] via 155.1.146.6, 00:14:51, GigabitEthernet1.146
 	155.1.0.0/16 is variably subnetted, 10 subnets, 2 masks
 	D 155.1.7.0/24 
-	\[90/20480\] via 155.1.146.6, 00:15:53, GigabitEthernet1.146
-	\[90/20480\] via 155.1.13.3, 00:15:53, GigabitEthernet1.13
+	[90/20480] via 155.1.146.6, 00:15:53, GigabitEthernet1.146
+	[90/20480] via 155.1.13.3, 00:15:53, GigabitEthernet1.13
 	D 155.1.37.0/24 
-	\[90/15360\] via 155.1.13.3, 00:15:53, GigabitEthernet1.13
+	[90/15360] via 155.1.13.3, 00:15:53, GigabitEthernet1.13
 	D 155.1.67.0/24 
-	\[90/15360\] via 155.1.146.6, 00:15:53, GigabitEthernet1.146
+	[90/15360] via 155.1.146.6, 00:15:53, GigabitEthernet1.146
 	D 155.1.79.0/24 
-	\[90/20480\] via 155.1.146.6, 00:15:53, GigabitEthernet1.146
-	\[90/20480\] via 155.1.13.3, 00:15:53, GigabitEthernet1.13
+	[90/20480] via 155.1.146.6, 00:15:53, GigabitEthernet1.146
+	[90/20480] via 155.1.13.3, 00:15:53, GigabitEthernet1.13
 
 Let's add our summary-routes to R4 & R6:
 
@@ -121,20 +121,20 @@ As we're doing summarization our loopbacks advertisements will be suppressed and
 	R1#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.146.6 to network 0.0.0.0
 
-	**D\* 0.0.0.0/0 \[90/10880\] via 155.1.146.6, 00:01:30, GigabitEthernet1.146**
+	**D* 0.0.0.0/0 [90/10880] via 155.1.146.6, 00:01:30, GigabitEthernet1.146**
 	**155.1.0.0/16 is variably subnetted, 10 subnets, 2 masks**
-	D 155.1.7.0/24 \[90/20480\] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
+	D 155.1.7.0/24 [90/20480] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
 	D 155.1.37.0/24 
-	\[90/15360\] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
+	[90/15360] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
 	D 155.1.67.0/24 
-	\[90/20480\] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
+	[90/20480] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
 	D 155.1.79.0/24 
-	\[90/20480\] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
+	[90/20480] via 155.1.13.3, 00:01:30, GigabitEthernet1.13
 
 	R5#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.45.4 to network 0.0.0.0
 
-	**D\* 0.0.0.0/0 \[90/3072\] via 155.1.45.4, 00:00:20, GigabitEthernet1.45**
+	**D* 0.0.0.0/0 [90/3072] via 155.1.45.4, 00:00:20, GigabitEthernet1.45**
 
 Next step is to use a leak-map so traffic going to R4s loopback is routed via DMVPN-cloud instead of the ethernet-segment. This will be easily solved by advertising that specific route out on our Tu0-interface together with our default-route. Longest-match makes routers prefer our specific-route instead of the default to get to 4.0.0.4. To implement this we use a "leak-map", I found it in the official DOC [here](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_eigrp/command/ire-cr-book/ire-i1.html#wp2135400909) & [here](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_eigrp/configuration/15-mt/ire-15-mt-book/ire-enhanced-igrp.html#GUID-87869953-0896-4333-8EE5-B747855C7108).
 
@@ -156,9 +156,9 @@ Neighbors will do a graceful-restart and then the results should be visible in R
 	R5#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.45.4 to network 0.0.0.0
 
-	D\* 0.0.0.0/0 \[90/3072\] via 155.1.45.4, 00:07:01, GigabitEthernet1.45
+	D* 0.0.0.0/0 [90/3072] via 155.1.45.4, 00:07:01, GigabitEthernet1.45
 	4.0.0.0/24 is subnetted, 1 subnets
-	**D EX 4.0.0.0 \[170/25984000\] via 155.1.0.4, 00:00:05, Tunnel0**
+	**D EX 4.0.0.0 [170/25984000] via 155.1.0.4, 00:00:05, Tunnel0**
 
 	R5#ping 4.0.0.4
 	Type escape sequence to abort.
@@ -175,7 +175,7 @@ If we close our Tunnel-interface traffic will still be routed over the default-r
 	R5#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.45.4 to network 0.0.0.0
 
-	**D\* 0.0.0.0/0 \[90/3072\] via 155.1.45.4, 00:09:36, GigabitEthernet1.45**
+	**D* 0.0.0.0/0 [90/3072] via 155.1.45.4, 00:09:36, GigabitEthernet1.45**
 
 	R5#ping 4.0.0.4 
 	Type escape sequence to abort.
@@ -205,16 +205,16 @@ Let's check R1 again:
 	R1#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.146.6 to network 0.0.0.0
 
-	**D\* 0.0.0.0/0 \[90/10880\] via 155.1.146.6, 00:11:33, GigabitEthernet1.146**
+	**D* 0.0.0.0/0 [90/10880] via 155.1.146.6, 00:11:33, GigabitEthernet1.146**
 	6.0.0.0/24 is subnetted, 1 subnets
-	**D EX 6.0.0.0 \[170/21120\] via 155.1.13.3, 00:00:20, GigabitEthernet1.13**
+	**D EX 6.0.0.0 [170/21120] via 155.1.13.3, 00:00:20, GigabitEthernet1.13**
 	155.1.0.0/16 is variably subnetted, 10 subnets, 2 masks
-	D 155.1.7.0/24 \[90/20480\] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
+	D 155.1.7.0/24 [90/20480] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
 	D 155.1.37.0/24 
-	\[90/15360\] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
+	[90/15360] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
 	D 155.1.67.0/24 
-	\[90/20480\] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
+	[90/20480] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
 	D 155.1.79.0/24 
-	\[90/20480\] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
+	[90/20480] via 155.1.13.3, 00:11:33, GigabitEthernet1.13
 
 All is good! I'm really starting to like EIGRP's named mode the more I use it, the classic feels so clunky now. Until next time... :)

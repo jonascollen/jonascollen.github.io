@@ -21,7 +21,7 @@ Requirements
 *   Enable EIGRP on DMVPN
 *   Set clock on R5 to current time and configure as NTP master
 *   Configure R1 - R4 to use R5 as NTP-server
-*   Authenticate adjacencies on DMVPN using the key-chain "KEY\_ROTATION"
+*   Authenticate adjacencies on DMVPN using the key-chain "KEY_ROTATION"
     *   Key-id 10 password CISCO10
     *   Key-id 20 password CISCO20
     *   Key 10 should be valid between 00:00:00 Jan 1 1993 to 00:10:00 Jan 1 2030 (and accepted an extra 10min)
@@ -67,7 +67,7 @@ The syntax for named-eigrp looks pretty different from the classic one, the bigg
 
 	R1#sh ntp status
 	**Clock is synchronized, stratum 2, reference is 155.1.0.5** 
-	nominal freq is 250.0000 Hz, actual freq is 249.9998 Hz, precision is 2\*\*10
+	nominal freq is 250.0000 Hz, actual freq is 249.9998 Hz, precision is 2**10
 	ntp uptime is 357700 (1/100 of seconds), resolution is 4016
 	reference time is DE974AC9.62D0E670 (21:10:33.386 UTC Fri May 4 2018)
 	clock offset is 0.0000 msec, root delay is 3.00 msec
@@ -76,12 +76,12 @@ The syntax for named-eigrp looks pretty different from the classic one, the bigg
 	system poll interval is 128, last update was 423 sec ago.
 
 	R1#sh ntp associations detail
-	**155.1.0.5 configured, ipv4, our\_master, sane, valid, stratum 1**
+	**155.1.0.5 configured, ipv4, our_master, sane, valid, stratum 1**
 	ref ID .LOCL., time DE974C5E.E7AE16F8 (21:17:18.905 UTC Fri May 4 2018)
 	our mode client, peer mode server, our poll intvl 128, peer poll intvl 128
 	root delay 0.00 msec, root disp 2.16, reach 377, sync dist 9.05
 	delay 2.00 msec, offset 0.0000 msec, dispersion 4.56, jitter 0.97 msec
-	precision 2\*\*10, version 4
+	precision 2**10, version 4
 	assoc id 39556, assoc name 155.1.0.5
 	assoc in packets 64, assoc out packets 64, assoc error packets 22
 	org time 00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1900)
@@ -97,7 +97,7 @@ Let's configure our key-chain now, it will look the same on all routers:
 ```
 ! R1 - R4
 
-key chain KEY\_ROTATION
+key chain KEY_ROTATION
  key 10
   accept-lifetime 00:00:00 1 Jan 1993 00:15:00 Jan 1 2030
   send-lifetime 00:00:00 1 Jan 1993 00:05:00 Jan 1 2030
@@ -114,7 +114,7 @@ By setting the accept-lifetime 10 minutes longer we should avoid losing connecti
 ! R1 - R4
 
 int tu0
- ip authentication key-chain eigrp 100 KEY\_ROTATION
+ ip authentication key-chain eigrp 100 KEY_ROTATION
  ip authentication mode eigrp 100 md5
 
 ! R5
@@ -122,7 +122,7 @@ int tu0
 router eigrp MULTI-AF
  address-family ipv4 autonomous-system 100
  af-interface Tu0
-  authentication key-chain KEY\_ROTATION
+  authentication key-chain KEY_ROTATION
   authentication mode md5
 ```
 
@@ -138,10 +138,10 @@ EIGRP: Received HELLO on Tu0 - paklen 60 nbr 155.1.0.5
  AS 100, Flags 0x0:(NULL), Seq 0/0 interfaceQ 0/0 iidbQ un/rely 0/0 peerQ un/rely 0/0
 
 R2#show key chain 
-Key-chain KEY\_ROTATION:
+Key-chain KEY_ROTATION:
  key 10 -- text "CISCO10"
- accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **\[valid now\]**
- send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030) **\[valid now\]**
+ accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **[valid now]**
+ send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030) **[valid now]**
  key 20 -- text "CISCO20"
  accept lifetime (00:00:00 UTC Jan 1 2030) - (infinite)
  send lifetime (00:00:00 UTC Jan 1 2030) - (infinite)
@@ -155,10 +155,10 @@ Let's change our clock and see what happens:
 set clock 23:59:00 Dec 31 2029
 
 R5#sh key chain 
-Key-chain KEY\_ROTATION:
+Key-chain KEY_ROTATION:
  key 10 -- text "CISCO10"
- accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **\[valid now\]**
- send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030) **\[valid now\]**
+ accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **[valid now]**
+ send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030) **[valid now]**
  key 20 -- text "CISCO20"
  accept lifetime (00:00:00 UTC Jan 1 2030) - (infinite)
  send lifetime (00:00:00 UTC Jan 1 2030) - (infinite)
@@ -166,13 +166,13 @@ Key-chain KEY\_ROTATION:
 R5#sh clock 
 **00:00:04.531 UTC Tue Jan 1 2030**
 R5#sh key chain 
-Key-chain KEY\_ROTATION:
+Key-chain KEY_ROTATION:
  key 10 -- text "CISCO10"
- accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **\[valid now\]**
- send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030) **\[valid now\]**
+ accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **[valid now]**
+ send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030) **[valid now]**
  key 20 -- text "CISCO20"
- accept lifetime (00:00:00 UTC Jan 1 2030) - (infinite) **\[valid now\]**
- send lifetime (00:00:00 UTC Jan 1 2030) - (infinite) **\[valid now\]**
+ accept lifetime (00:00:00 UTC Jan 1 2030) - (infinite) **[valid now]**
+ send lifetime (00:00:00 UTC Jan 1 2030) - (infinite) **[valid now]**
 ```
 
 As NTP is horribly slow to converge, or if they just think master is insane with the big change in time, I manually set the time in R1 - R4 to speed things up. Checking debug in R1 we're still receiving key-10 as it's still valid with our current config:
@@ -190,13 +190,13 @@ R5#sh clock
 00:05:12.716 UTC Tue Jan 1 2030
 R5#sh key
 R5#sh key chain
-Key-chain KEY\_ROTATION:
+Key-chain KEY_ROTATION:
  key 10 -- text "CISCO10"
- accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **\[valid now\]**
+ accept lifetime (00:00:00 UTC Jan 1 1993) - (00:15:00 UTC Jan 1 2030) **[valid now]**
  send lifetime (00:00:00 UTC Jan 1 1993) - (00:05:00 UTC Jan 1 2030)
  key 20 -- text "CISCO20"
- accept lifetime (00:00:00 UTC Jan 1 2030) - (infinite) **\[valid now\]**
- send lifetime (00:00:00 UTC Jan 1 2030) - (infinite) \[**valid now\]**
+ accept lifetime (00:00:00 UTC Jan 1 2030) - (infinite) **[valid now]**
+ send lifetime (00:00:00 UTC Jan 1 2030) - (infinite) [**valid now]**
 ```
 And in R1 we can see R5 is now using key20 instead without losing adjacency:
 ```

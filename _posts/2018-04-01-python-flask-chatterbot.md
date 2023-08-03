@@ -23,15 +23,15 @@ Vi importerar sedan biblioteket i vår python-fil och skapar vår egen Chatbot-i
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
-english\_bot = ChatBot("jcAI", 
-  storage\_adapter="chatterbot.storage.SQLStorageAdapter",
-  database\_uri="postgres://user:password@localhost:5432/chatbot")
+english_bot = ChatBot("jcAI", 
+  storage_adapter="chatterbot.storage.SQLStorageAdapter",
+  database_uri="postgres://user:password@localhost:5432/chatbot")
 ```
 
 Nästa steg blir att "träna" vår chatbot, antingen via fördefinierade Corpus-filer som följer med vid installationen eller så skapar vi egna, i mitt fall gjorde jag både och. Filerna laddas härifrån:
 
 ```
-**/www/flaskenv/lib/python3.5/site-packages/chatterbot\_corpus/data**$ ls -l
+**/www/flaskenv/lib/python3.5/site-packages/chatterbot_corpus/data**$ ls -l
 totalt 68
 drwxr-xr-x 2 joco02 joco02 4096 mar 7 13:29 bangla
 drwxr-xr-x 2 joco02 joco02 4096 mar 7 13:29 chinese
@@ -55,19 +55,19 @@ drwxr-xr-x 2 joco02 joco02 4096 mar 7 13:29 telugu
 Några exempel från min egna Corpus-fil (sparad i custom), den inledande meningen/frågan börjar alltid med "- -" och efterföljande svar med "-":
 
 ```
-\- - Dagens lunch
+- - Dagens lunch
   - Please use ex. !lunch KG13 or !lunch pannbiff
 - - DHCP
   - DCHP-documents is found <a href="http://link.link/DHCP/">here.</a>
 - - Edge
-  - Edge & Core Workroom is found <a href="http://link.link/core\_agg/">here.</a>
+  - Edge & Core Workroom is found <a href="http://link.link/core_agg/">here.</a>
 ```
 
 Vi pekar sedan på önskade Corpus-filer i scriptet (detta behövs endast köras en gång och kan sedan kommenteras bort, verifiera via apache2-loggen att allt gick bra).
 
 ```
-english\_bot.set\_trainer(ChatterBotCorpusTrainer)
-english\_bot.train("chatterbot.corpus.swedish", "chatterbot.corpus.english", "chatterbot.corpus.custom")
+english_bot.set_trainer(ChatterBotCorpusTrainer)
+english_bot.train("chatterbot.corpus.swedish", "chatterbot.corpus.english", "chatterbot.corpus.custom")
 ```
 
 Sedan återstår endast att presentera användarinput & vår Chatbots svar på en webbsida:
@@ -75,13 +75,13 @@ Sedan återstår endast att presentera användarinput & vår Chatbots svar på e
 ```
 @app.route("/chatbot")
 def chatbot():
-  return render\_template("chatbot.html")
+  return render_template("chatbot.html")
 
 @app.route("/get")
-def get\_bot\_response():
+def get_bot_response():
   userText = request.args.get('msg')
 
-  return str(english\_bot.get\_response(userText))
+  return str(english_bot.get_response(userText))
 ```
 
 ### HTML

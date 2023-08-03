@@ -53,11 +53,11 @@ Checking the routes in R8 confirms that we "should" have connectivity to the two
 	R8#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.58.5 to network 0.0.0.0
 
-	**D\* 0.0.0.0/0 \[90/3328\] via 155.1.58.5, 00:18:58, GigabitEthernet1.58**
+	**D* 0.0.0.0/0 [90/3328] via 155.1.58.5, 00:18:58, GigabitEthernet1.58**
 	155.1.0.0/16 is variably subnetted, 7 subnets, 2 masks
-	D 155.1.45.0/24 \[90/3072\] via 155.1.58.5, 00:18:58, GigabitEthernet1.58
+	D 155.1.45.0/24 [90/3072] via 155.1.58.5, 00:18:58, GigabitEthernet1.58
 	160.1.0.0/23 is subnetted, 1 subnets
-	**D 160.1.4.0 \[90/130816\] via 155.1.58.5, 00:00:43, GigabitEthernet1.58**
+	**D 160.1.4.0 [90/130816] via 155.1.58.5, 00:00:43, GigabitEthernet1.58**
 
 But ping is still failing to R4:
 
@@ -78,7 +78,7 @@ How come? All summary-routes created in ex. EIGRP & OSPF will also add a Null0-r
 	R5#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.45.4 to network 0.0.0.0
 
-	D\* 0.0.0.0/0 \[90/3072\] via 155.1.45.4, 00:22:19, GigabitEthernet1.45
+	D* 0.0.0.0/0 [90/3072] via 155.1.45.4, 00:22:19, GigabitEthernet1.45
 	160.1.0.0/16 is variably subnetted, 3 subnets, 3 masks
 	**D 160.1.4.0/23 is a summary, 00:04:05, Null0**
 
@@ -97,7 +97,7 @@ The summary-route is still active in a way as our router will keep suppressing t
 	R5#sh ip route eigrp | beg Gate
 	Gateway of last resort is 155.1.45.4 to network 0.0.0.0
 
-	D\* 0.0.0.0/0 \[90/3072\] via 155.1.45.4, 00:26:02, GigabitEthernet1.45
+	D* 0.0.0.0/0 [90/3072] via 155.1.45.4, 00:26:02, GigabitEthernet1.45
 
 We can now reach both R4 & R5's loopback from R8.
 

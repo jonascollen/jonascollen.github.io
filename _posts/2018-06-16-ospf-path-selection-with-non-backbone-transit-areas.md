@@ -90,21 +90,21 @@ We solve this by setting up a virtual link between R6 & R1, remember we're not s
         R6#sh ip ospf neighbor
 
         Neighbor ID Pri State Dead Time Address Interface
-        150.1.1.1 0 FULL/ - - 155.1.146.1 OSPF\_VL0
+        150.1.1.1 0 FULL/ - - 155.1.146.1 OSPF_VL0
         150.1.1.1 1 FULL/DROTHER 00:00:35 155.1.146.1 GigabitEthernet1.146
         150.1.4.4 1 FULL/BDR 00:00:37 155.1.146.4 GigabitEthernet1.146
         150.1.7.7 1 FULL/BDR 00:00:31 155.1.67.7 GigabitEthernet1.67
 
         R6#sh ip ospf interface 
-        OSPF\_VL0 is up, line protocol is up 
+        OSPF_VL0 is up, line protocol is up 
         Internet Address 155.1.146.6/24, Area 0, Attached via Not Attached
-        Process ID 1, Router ID 150.1.6.6, Network Type VIRTUAL\_LINK, Cost: 1
+        Process ID 1, Router ID 150.1.6.6, Network Type VIRTUAL_LINK, Cost: 1
         Topology-MTID Cost Disabled Shutdown Topology Name
         0 1 no no Base
         Configured as demand circuit
         Run as demand circuit
         DoNotAge LSA allowed
-        Transmit Delay is 1 sec, State POINT\_TO\_POINT
+        Transmit Delay is 1 sec, State POINT_TO_POINT
         Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
         oob-resync timeout 40
         Hello due in 00:00:08
@@ -154,7 +154,7 @@ R7 now see's R6 as an ABR which in turn will send summary-LSAs for the rest of t
         Internal Router Routing Table
         Codes: i - Intra-area route, I - Inter-area route
 
-        i 150.1.6.6 \[1\] via 155.1.67.6, GigabitEthernet1.67, ABR, Area 2, SPF 6
+        i 150.1.6.6 [1] via 155.1.67.6, GigabitEthernet1.67, ABR, Area 2, SPF 6
 
         R7#sh ip ospf database | beg Summary
         Summary Net Link States (Area 2)
@@ -176,7 +176,7 @@ R7 now see's R6 as an ABR which in turn will send summary-LSAs for the rest of t
         Known via "ospf 1", distance 110, metric 5, type inter area
         Last update from 155.1.67.6 on GigabitEthernet1.67, 00:06:17 ago
         Routing Descriptor Blocks:
-        **\* 155.1.67.6, from 150.1.6.6, 00:06:17 ago, via GigabitEthernet1.67**
+        *** 155.1.67.6, from 150.1.6.6, 00:06:17 ago, via GigabitEthernet1.67**
         Route metric is 5, traffic share count is 1
 
 Even if we enable R3's link to R7 now the traffic will still prefer the route via R6 as it has a lower metric to R8, indifferent to the fact that a virtual-link is needed to traverse that area.
@@ -218,7 +218,7 @@ By checking the metric you may already have realized how the traffic is currentl
         1 155.1.67.6 7 msec 3 msec 4 msec
         2 155.1.146.4 5 msec 5 msec 5 msec
         3 155.1.45.5 6 msec 6 msec 6 msec
-        4 155.1.58.8 6 msec \* 6 msec
+        4 155.1.58.8 6 msec * 6 msec
 
 How come? Let's dive in to R6's database.
 
@@ -306,7 +306,7 @@ R6's metric to R8 is updated to reflect the new path via R1:
         Known via "ospf 1", distance 110, metric 1003, type inter area
         Last update from 155.1.146.1 on GigabitEthernet1.146, 00:00:25 ago
         Routing Descriptor Blocks:
-        \* 155.1.146.1, from 150.1.5.5, 00:00:25 ago, via GigabitEthernet1.146
+        * 155.1.146.1, from 150.1.5.5, 00:00:25 ago, via GigabitEthernet1.146
         Route metric is 1003, traffic share count is 1
 
         R6#traceroute 150.1.8.8
@@ -316,6 +316,6 @@ R6's metric to R8 is updated to reflect the new path via R1:
         1 155.1.146.1 5 msec 4 msec 4 msec
         2 155.1.146.4 5 msec 5 msec 5 msec
         3 155.1.45.5 7 msec 6 msec 7 msec
-        4 155.1.58.8 7 msec \* 7 msec
+        4 155.1.58.8 7 msec * 7 msec
 
 Very interesting! Even though it's uses may be very specific and not commonly used in the "real world" it feels like it certainly can be something that they throw at you at the CCIE-exam.

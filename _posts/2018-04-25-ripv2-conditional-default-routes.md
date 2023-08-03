@@ -32,16 +32,16 @@ Big difference from ex. OSPF is that RIP doesn't require the route to be in it's
 ```
 R6#sh ip rip database 0.0.0.0 0.0.0.0
 0.0.0.0/0
- **\[4\]** via 155.1.67.7, 00:00:07, GigabitEthernet1.67
+ **[4]** via 155.1.67.7, 00:00:07, GigabitEthernet1.67
 
 R6#sh ip rip database 0.0.0.0 0.0.0.0
 0.0.0.0/0
- **\[8\]** via 155.1.67.7, 00:00:00, GigabitEthernet1.67
+ **[8]** via 155.1.67.7, 00:00:00, GigabitEthernet1.67
 
 R1#sh ip route | beg Gate
 Gateway of last resort is 155.1.146.6 to network 0.0.0.0
 
-R\* 0.0.0.0/0 **\[120/13\]** via 155.1.146.6, 00:00:02, GigabitEthernet1.146
+R* 0.0.0.0/0 **[120/13]** via 155.1.146.6, 00:00:02, GigabitEthernet1.146
 ```
 
 This can be solved in many ways, I chose to insert a dummy default-route to null0, but you could also use filtering etc.
@@ -57,12 +57,12 @@ R6 will now ignore the default-route advertisement from R7 and not propagate it 
 ```
 R6#sh ip rip database 0.0.0.0 0.0.0.0
 0.0.0.0/0 redistributed
- \[1\] via 0.0.0.0,
+ [1] via 0.0.0.0,
 
 R8#sh ip rip database 
 0.0.0.0/0 auto-summary
 0.0.0.0/0
- \[3\] via 155.1.58.5, 00:00:09, GigabitEthernet1.58
+ [3] via 155.1.58.5, 00:00:09, GigabitEthernet1.58
 ```
 
 ### Second lab - Conditional default-route
@@ -74,13 +74,13 @@ This lab requires us to originate a default-route from R4 as long as it has a ro
 
 ip prefix-list R9 permit 150.1.9.9/32
 
-route-map R9\_TRACKING permit 10
+route-map R9_TRACKING permit 10
  match ip address prefix-list R9
 
 ip route 0.0.0.0 0.0.0.0 null0
 
 router rip
- default-information originate route-map R9\_TRACKING
+ default-information originate route-map R9_TRACKING
 ```
 
 The logic is that as long as our route-map matches the prefix-list of R9s loopback it will advertise the default-route, and we add a static route to avoid routing loops via the DMVPN-hub R5 (no split-horizon). Let's verify to be sure.
@@ -88,7 +88,7 @@ The logic is that as long as our route-map matches the prefix-list of R9s loopba
 ```
 R5#sh ip route | inc 0.0.0.0
 Gateway of last resort is 155.1.45.4 to network 0.0.0.0
-R\* 0.0.0.0/0 \[120/1\] via 155.1.45.4, 00:00:05, GigabitEthernet1.45
+R* 0.0.0.0/0 [120/1] via 155.1.45.4, 00:00:05, GigabitEthernet1.45
 ```
 
 If we shut R9s loopback the default-route should time out eventually.
@@ -139,10 +139,10 @@ Next step we borrow from our second lab, we create a prefix-list matching our du
 ```
 ! R1
 
-ip prefix-list DUMMY\_FILTER permit 169.254.254.1/32
+ip prefix-list DUMMY_FILTER permit 169.254.254.1/32
 
 route-map DUMMY permit 10
- match ip address prefix-list DUMMY\_FILTER
+ match ip address prefix-list DUMMY_FILTER
 
 router rip
  default-information originate route-map DUMMY

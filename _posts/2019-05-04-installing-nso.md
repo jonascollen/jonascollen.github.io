@@ -33,7 +33,7 @@ $ java -version
  OpenJDK 64-Bit Server VM (build 11.0.2+9-Ubuntu-3ubuntu118.04.3, mixed mode, sharing)  
 ```
 
-I then downloaded the file nso-4.7.linux.x86\_64.signed.bin from [Cisco](https://developer.cisco.com/site/nso/), installation was actually much more simpler than I had imagined.
+I then downloaded the file nso-4.7.linux.x86_64.signed.bin from [Cisco](https://developer.cisco.com/site/nso/), installation was actually much more simpler than I had imagined.
 
 ```text
 joco02 at labb-nso in ~/Downloads

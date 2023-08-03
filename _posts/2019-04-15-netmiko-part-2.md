@@ -7,9 +7,9 @@ tags: [templates]
 ---
 A follow-up on the latest post about [Netmiko](https://github.com/ktbyers/netmiko) where we logged in to our devices and did some show commands, let's continue and do a very common thing in production networks with many devices - pushing out new config from a template.
 
-I'll be using our latest login\_simple.py from last post as a base and just modify it slightly. First we create our config-file that we want in all our devices., let's say we want to rollout a new route-map in our network.
+I'll be using our latest login_simple.py from last post as a base and just modify it slightly. First we create our config-file that we want in all our devices., let's say we want to rollout a new route-map in our network.
 
-**config\_template.txt**
+**config_template.txt**
 
     ip prefix-list DEFAULT-ROUTE seq 5 permit 0.0.0.0/0
     !
@@ -20,11 +20,11 @@ I'll be using our latest login\_simple.py from last post as a base and just modi
     route-map DEFAULT-INJECT permit 20
      set extcommunity rt 300:300
 
-In netmiko we can then use "**send\_config\_from\_file**" when we've logged in to our device(s), super simple! Notice that we don't have to manage the context in our router (enable/conf t etc), netmiko does it for us.
+In netmiko we can then use "**send_config_from_file**" when we've logged in to our device(s), super simple! Notice that we don't have to manage the context in our router (enable/conf t etc), netmiko does it for us.
 
 ![](/assets/images/2019/04/netmiko.png)
 
-**conf\_from\_file.py**
+**conf_from_file.py**
 
     from netmiko import ConnectHandler
     from datetime import datetime
@@ -47,9 +47,9 @@ In netmiko we can then use "**send\_config\_from\_file**" when we've logged in t
             command_result = connection.send_config_from_file(FILE)
             device_result.append(command_result)
     
-            device_result_string = "\n\n".join(device_result)
+            device_result_string = "nn".join(device_result)
             connection.disconnect()
-            device_result_string += "\nElapsed time: " + str(datetime.now() - start_time)
+            device_result_string += "nElapsed time: " + str(datetime.now() - start_time)
             yield device_result_string
     
     def main():
