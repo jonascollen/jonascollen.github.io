@@ -1,7 +1,6 @@
 ---
 title: OSPF - Path Selection with Non-Backbone Transit Areas
 date: 2018-06-16 11:05
-author: Jonas Collén
 comments: true
 categories: [OSPF, Route Manipulation]
 tags: [routing, transit area, transitcapability, virtual-link]

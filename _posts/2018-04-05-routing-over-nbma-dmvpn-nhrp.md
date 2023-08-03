@@ -1,7 +1,6 @@
 ---
 title: Routing över NBMA - DMVPN & NHRP
 date: 2018-04-05 19:24
-author: Jonas Collén
 comments: true
 categories: [DMVPN, NHRP]
 ---

@@ -1,7 +1,6 @@
 ---
 title: Reliable Policy-based routing
 date: 2018-04-11 20:34
-author: Jonas Collén
 comments: true
 categories: [Route Manipulation]
 tags: [policy routing, verify-availability]

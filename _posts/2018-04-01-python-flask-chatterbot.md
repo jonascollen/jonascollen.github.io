@@ -1,8 +1,6 @@
 ---
-layout: post
 title: Python & Flask - Chatterbot
 date: 2018-04-01 17:31
-author: Jonas Collén
 comments: true
 categories: [AI, Python]
 tags: [chatterbot, flask]

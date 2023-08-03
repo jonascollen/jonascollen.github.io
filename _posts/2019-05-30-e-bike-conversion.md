@@ -1,7 +1,6 @@
 ---
 title: E-Bike conversion - Nishiki Pro Air BBSHD
 date: 2019-05-30 22:34
-author: Jonas Collén
 comments: true
 categories: [Projects, Other]
 tags: [bbshd, em3ev, electric bike]

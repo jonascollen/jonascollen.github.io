@@ -1,7 +1,6 @@
 ---
 title: Policy-based routing
 date: 2018-04-08 05:20
-author: Jonas Collén
 comments: true
 categories: [Route Manipulation]
 tags: [policy-based routing, route-maps]

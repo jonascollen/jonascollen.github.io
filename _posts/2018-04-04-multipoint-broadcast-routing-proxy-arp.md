@@ -1,7 +1,6 @@
 ---
 title: Multipoint Broadcast routing & Proxy-ARP
 date: 2018-04-04 19:49
-author: Jonas Collén
 comments: true
 categories: [Route Manipulation]
 tags: [proxy arp, static arp]

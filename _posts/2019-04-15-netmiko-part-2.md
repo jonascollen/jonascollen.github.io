@@ -1,7 +1,6 @@
 ---
 title: Netmiko part 2
 date: 2019-04-15 21:46
-author: Jonas Collén
 comments: true
 categories: [Netmiko, Automation, Python]
 tags: [templates]

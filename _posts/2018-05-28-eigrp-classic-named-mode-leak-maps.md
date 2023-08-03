@@ -1,7 +1,6 @@
 ---
 title: EIGRP Classic & Named mode - Leak-maps
 date: 2018-05-28 21:23
-author: Jonas Collén
 comments: true
 categories: [EIGRP, Route Manipulation]
 tags: [leak-map, redistribution]

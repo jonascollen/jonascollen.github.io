@@ -1,7 +1,6 @@
 ---
 title: GNS3, IOU-images & VM Workstation
 date: 2019-04-15 17:40
-author: Jonas Collén
 comments: true
 categories: [GNS3]
 tags: [vix,vmware]

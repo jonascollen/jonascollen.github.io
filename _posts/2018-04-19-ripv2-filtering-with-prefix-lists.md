@@ -1,7 +1,6 @@
 ---
 title: RIPv2 Filtering with Prefix-lists
 date: 2018-04-19 20:18
-author: Jonas Collén
 comments: true
 categories: [RIP, Route Manipulation]
 tags: [prefix-list, filtering]

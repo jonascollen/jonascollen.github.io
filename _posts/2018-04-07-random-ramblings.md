@@ -1,7 +1,6 @@
 ---
 title: Current progress & random ramblings
 date: 2018-04-07 08:10
-author: Jonas Collén
 comments: true
 categories: [General]
 tags: [ccie recommended reading, doccd, vbs]

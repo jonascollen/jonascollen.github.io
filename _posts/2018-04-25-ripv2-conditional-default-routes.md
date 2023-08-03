@@ -1,7 +1,6 @@
 ---
 title: RIPv2 Conditional default-routes
 date: 2018-04-25 21:31
-author: Jonas Collén
 comments: true
 categories: [RIP,Route Manipulation]
 tags: [conditional routes]

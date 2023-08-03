@@ -1,7 +1,6 @@
 ---
 title: EIGRP Classic & Named mode - Key rotation
 date: 2018-05-04 22:00
-author: Jonas Collén
 comments: true
 categories: [EIGRP]
 tags: [authentication, classic-mode, named-mode]

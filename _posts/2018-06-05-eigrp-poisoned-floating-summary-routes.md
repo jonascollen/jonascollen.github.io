@@ -2,7 +2,6 @@
 layout: post
 title: EIGRP - Poisoned floating summary-routes
 date: 2018-06-05 20:45
-author: Jonas Collén
 comments: true
 categories: [EIGRP, Route Poisoning]
 tags: [ summary route ]

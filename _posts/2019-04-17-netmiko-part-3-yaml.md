@@ -1,7 +1,6 @@
 ---
 title: Netmiko part 3 - YAML
 date: 2019-04-17 21:01
-author: Jonas Collén
 comments: true
 categories: [Python, Automation, Netmiko]
 tags: [netmiko, yaml]

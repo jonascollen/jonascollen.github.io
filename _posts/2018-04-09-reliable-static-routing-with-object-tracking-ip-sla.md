@@ -1,7 +1,6 @@
 ---
 title: Reliable static routing with Object tracking/IP SLA
 date: 2018-04-09 09:14
-author: Jonas Collén
 comments: true
 categories: [Route Manipulation]
 tags: [ip-sla,object tracking, floating routes]

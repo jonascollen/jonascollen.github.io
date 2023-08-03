@@ -18,9 +18,10 @@ I might even get some inspiration to start posting now and then again but that r
 
 ### Current Certifications
 
+- Cisco DevNet Associate
+- Cisco DevNet Specialist - Service Provider Automation and Programmability
 - Cisco CCNP Enterprise
 - Cisco CCNA Security
-- Cisco DevNet Associate
 - AWS Cloud Practioner
 
 ### Contact/Links

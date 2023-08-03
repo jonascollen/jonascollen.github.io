@@ -1,7 +1,6 @@
 ---
 title: Busy summer & recertified CCNP
 date: 2019-10-07 16:05
-author: Jonas Collén
 comments: true
 categories: [Other]
 tags: [certification, life]

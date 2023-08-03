@@ -1,7 +1,6 @@
 ---
 title: EIGRP - Prefix filtering
 date: 2018-06-09 14:21
-author: Jonas Collén
 comments: true
 categories: [EIGRP, Route Filtering, Route Manipulation]
 tags: [acl, prefix-list, tags]
