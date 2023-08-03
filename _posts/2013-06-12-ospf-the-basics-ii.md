@@ -16,9 +16,9 @@ Om vi tänker tillbaka till den föregående posten, OSPF - The Basics, så komm
 
 Det här problemet uppstår endast när vi har ett "Shared network segment" som ovan, för "Point-to-Point" så kan det ju endast finnas en neighbor. För att komma tillrätta med detta problem väljer routrarna istället ut en specifik  "ledare", **Designated Router (DR)****,** som de sätter upp sin adjacency mot och sedan utbyter all routing-information med. Det är denna router som i sin tur är ansvarig för att hålla resterande enheter uppdaterade med routing-information. För att vara på den säkra sidan om denna DR-router skulle gå ner väljs det även ut en **Backup Designated Router (BDR).** Låt oss säga att R6 blir vald till DR och R9 till BDR, neighbor adjacencys skulle då istället se ut såhär: 
 
-[![DR](/assets/images/2013/06/dr.png)](/assets/images/2013/06/dr.png
+[![DR](/assets/images/2013/06/dr.png)](/assets/images/2013/06/dr.png)
 
-Övriga routrar stannar kvar i "Steg 5" från [OSPF - The Basics](http://Jonas Collén.wordpress.com/2013/06/12/ospf-the-basics/), **2-way state**, mellan varandra och bildar ej en full neighbor adjacency. Om DR-routern går offline kommer BDR-routern att uppgradera sig till DR och en annan router kommer väljas till BDR. Hur väljs då BD & BDR? Följande parametrar bestämmer vilken router som kommer väljas:
+Övriga routrar stannar kvar i "Steg 5" från [OSPF - The Basics](http://www.jonascollen.se/posts/ospf-the-basics/), **2-way state**, mellan varandra och bildar ej en full neighbor adjacency. Om DR-routern går offline kommer BDR-routern att uppgradera sig till DR och en annan router kommer väljas till BDR. Hur väljs då BD & BDR? Följande parametrar bestämmer vilken router som kommer väljas:
 
 *   Routern med den **högsta priorityn** blir **DR**
 *   Routern med den **näst högsta priorityn** blir **BDR**

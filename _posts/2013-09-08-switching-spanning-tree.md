@@ -42,7 +42,7 @@ VLAN0001
  Aging Time 300
 ```
 När en switch sedan tar emot ett BPDU-paket jämför den Root-ID:t med vad den själv har konfigurerat, är värdet bättre (lägre) byter den Root-bridge. De här bilderna visar förloppet väldigt bra: 
-![switches-in-triangle](/assets/images/2013/09/switches-in-triangle.pn) 
+![switches-in-triangle](/assets/images/2013/09/switches-in-triangle.png) 
 
 Varje switch sätter sig själv som Root-Bridge och bygger ett BPDU-paket med Priority 32768 & dess MAC-adress. 
 
